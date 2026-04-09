@@ -1,2 +1,2 @@
-# EPL_Players
-Display English Premier League players based on team and position
+# Man-City_Players
+Display Man-City players based on position
