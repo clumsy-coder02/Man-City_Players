@@ -1,0 +1,40 @@
+Display English Premier League players based on team and position 
+
+ManCity players
+
+Each Team is a dictionary
+inside the dictionary of a team there are also dictionaries(based on position) with,
+list of players.
+
+Team names are variables
+positions are keys
+players in that position are values(made as a list)
+
+Positions:
+1.GoalKeeping(dictionary)
+    1.GoalKeeper(key)
+        values(list, players)
+
+2.Defense(dictionary)
+    1.Right Back(key)
+        values(list, players)
+    2.Left Back(key)
+        values(list, players)
+    3.Center Back(key)
+        values(list, players)
+
+3.Midfield(dictionary)
+    1.Defensive Midfielder(key)
+        values(list, players)
+    2.Central Midfielder(key)
+        values(list, players)
+    3.Attacking Midfielder(key)
+        values(list, players)
+
+4.Attack(dictionary)
+    1.Center Forward(key)
+        values(list, players)
+    2.Left Winger(key)
+        values(list, players)
+    3.Right Winger(key)
+        values(list, players)
