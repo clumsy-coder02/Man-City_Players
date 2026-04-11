@@ -6,7 +6,10 @@ print("1.GoalKeeping\n2.Defense\n3.Midfield\n4.Attack")
 
 # first user input
 print() # spacing
-main_position = input("Select player's position from above? ")
+try:
+    main_position = input("Select player's position from above? ")
+except:
+    print("Select by typing a number 1 to 4")
 print() # spacing
 
 # main options
@@ -19,8 +22,6 @@ def main_options():
         midfielders_function() # call midfielders
     elif main_position == "4":
         attack_function() # call attack
-    else:
-        print("Select by typing a number 1 to 4")
 
 # main functions
 # goalkeepers
@@ -38,50 +39,90 @@ def defenders_function():
     print("1.Right Back(RB)\n2.Left Back(LB)\n3.Center Back(CB)")
 
     print() # spacing
-    minor_position = input("Select player's position from above? ")
+    try:
+        minor_position = input("Select player's position from above? ")
+    except:
+        print("Select by typing a number 1 to 4")
     print() # spacing
 
     defenders = {
-        "RB": ["Nunes"],
-        "LB": ["Nico"],
-        "CB": ["Dias", "Gvardial"]
+        "RB": ["John Stones","Abdukodir Khusanov","Rico Lewis","Issa Kaboré","Matheus Nunes"],
+        "LB": ["Nico O'Reilly","Rayan Aït-Nouri","Joško Gvardiol","Nathan Aké",],
+        "CB": ["Rúben Dias","John Stones","Nathan Aké","Marc Guéhi","Joško Gvardiol",
+            "Abdukodir Khusanov","Max Alleyne","Kaden Braithwaite","Kian Noble"]
     }
 
     if minor_position == "1":
-        pass # display right backs
+        output = defenders["RB"]
+        print(f"Right Back(RB): {",".join(output)}")
     elif minor_position == "2":
-        pass # display left backs
+        output = defenders["LB"]
+        print(f"Left Back(LB): {",".join(output)}")
     elif minor_position == "3":
-        pass # display center backs
-    else:
-        print("Select by entering a number")
+        output = defenders["CB"]
+        print(f"Center Back(CB): {",".join(output)}")
 
 # midfielders
 def midfielders_function():
     # show midfielders
     print("1.Defensive Midfielder(DMF)\n2.Central Midfielder(CMF)\n3.Attacking Midfielder(AMF)")
-    minor_position = input("Select player's position from above? ")
+
+    print() # spacing
+    try:
+        minor_position = input("Select player's position from above? ")
+    except:
+        print("Select by entering a number")
+    print()
+
+    midfielders = {
+        "AMF": ["Bernardo Silva","Phil Foden","Rayan Cherki","Oscar Bobb",
+                "Divine Mukasa","Tijjani Reijnders","Matheus Nunes"],
+        "CMF": ["Rodri","Nico González","Mateo Kovačić","Tijjani Reijnders",
+                "Matheus Nunes","Bernardo Silva","Sverre Nypan","Charlie Gray"],
+        "DMF": ["Rodri","Nico González","Mateo Kovačić","Tijjani Reijnders"]
+    }
 
     if minor_position == "1":
-        pass # display DMF
+        output = midfielders["DMF"]
+        print(f"Defensive Midfielders: {",".join(output)}")
     elif minor_position == "2":
-        pass # display CMF
+        output = midfielders["CMF"]
+        print(f"Central Midfielders: {",".join(output)}")
     elif minor_position == "3":
-        pass # display AMF
-    else:
-        pass 
+        output = midfielders["AMF"]
+        print(f"Attacking Midfielders: {",".join(output)}")
 
 # attackers
 def attack_function():
-    # show attackers
-    pass
+        # show midfielders
+    print("1.Left Wing Forward(LWF)\n2.Center Forward(CF)\n3.Right Wing Forward(RWF)")
+
+    print() # spacing
+    try:
+        minor_position = input("Select player's position from above? ")
+    except:
+        print("Select by entering a number 1 to 3")
+    print()
+
+    attack = {
+        "LWF": ["Omar Marmoush","Jérémy Doku ","Savinho","Antoine Semenyo"],
+        "CF": ["Erling Haaland","Omar Marmoush","Divin Mubama","Reigan Heskey","Jaden Heskey"],
+        "RWF": ["Omar Marmoush","Jérémy Doku","Savinho","Antoine Semenyo"]
+    }
+
+
+    if minor_position == "1":
+        output = attack["LWF"]
+        print(f"Left Wingers: {",".join(output)}")
+    elif minor_position == "2":
+        output = attack["CF"]
+        print(f"Center Forwards: {",".join(output)}")
+    elif minor_position == "3":
+        output = attack["RWF"]
+        print(f"Right Wingers: {",".join(output)}")
+    
 
 # first function to call
 if __name__ == "__main__":
     main_options()
-
-
-# # output format
-# list = ["Goy", "Reagan"]
-# print(",".join(list))
 
